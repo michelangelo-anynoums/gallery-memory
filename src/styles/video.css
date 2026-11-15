@@ -1,0 +1,53 @@
+h1 {
+  color: var(--color-text);
+  margin-top: 2rem;
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  gap: 45px;
+  padding: 35px 25px;
+}
+
+.video {
+  width: 100%;
+  overflow: hidden;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 800px;
+}
+
+.video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+}
+
+@media (max-width: 600px) {
+  #video-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .video {
+    border-radius: 8px;
+    height: 400px;
+  }
+}

@@ -1,0 +1,18 @@
+#wrapper {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #8c817862;
+  z-index: 99;
+  display: block;
+}
+
+#complete {
+  max-width: 100%;
+  height: 10px;
+  z-index: 999;
+  display: block;
+  background-color: var(--color-text);
+}
